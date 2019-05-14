@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0; 
+  padding: 0px;  
+  text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; 
+  font-size: 16px;
+  @include max(1199) { 
+    font-size: 15px;
+  }
+  @include max(767) { 
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0; 
+  padding: 0px; 
+  overflow-y:scroll; 
+  text-size-adjust: 100%;
+  font-family: $body-font; 
+  font-size: $base-font;
+ }
+
+a {  
+  transition:all ease .3s;
+  &:hover {  
+    text-decoration: none;
+  }
+}
+
+a:hover, a:active, a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+
+input,
+select,
+textarea,
+button {
+  font: #{$base-font}/$base-line-height $body-font; 
+  &:hover,&:focus,&:active{
+    outline: 0; text-decoration: none;  
+  }
+}
+
+// Horizontal lines
+//
+hr{
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  @include clearfix();
+}
+
+.browserupgrade {
+    background: #f00;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 0.8em;
+    width: 100%;
+    position: fixed;
+    left: 0;top: 0;
+    z-index: 9999;
+    a{
+      font-weight: bold;
+      color: #ff0;
+    }
+}
+
+.clearfix{
+  @include clearfix();
+}
+
+iframe[name='google_conversion_frame'] { 
+   height: 0 !important;
+   width: 0 !important; 
+   line-height: 0 !important; 
+   font-size: 0 !important;
+   margin-top: -13px;
+   float: left;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  vertical-align:middle;
+}
+
+figure{
+  margin:0;
+  padding:0;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.no-gutters { 
+  padding: 0px; 
+  margin: 0px;
+}
+
+a[href^="tel:"] {
+  cursor: default;
+  text-decoration: none;
+}
+
+.image-wrapper {
+  background-color: $gray-light;
+  position: relative;
+  img {
+    @extend .resize-image;
+  }
+  @include max(767) {
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+    }
+  }
+}
+.resize-image {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+

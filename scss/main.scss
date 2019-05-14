@@ -1,0 +1,36 @@
+
+
+// * Sass Boilerplate v2.0
+// * Copyright 2019, Thanseer Ahammed.S
+// * https://github.com/Thanseer Ahammed.S/sass-boilerplate-master
+// * Free to use under the MIT license.
+// * http://www.opensource.org/licenses/mit-license.php
+
+
+
+// @import "bourbon"; //Uncomment if you are not using Prepross
+
+
+// mixins
+@import "mixins/variables";
+@import "mixins/mixins";
+@import "mixins/effects";
+
+// modules
+@import "modules/normalize";
+@import "modules/base";
+@import "modules/type";
+@import "modules/forms";
+@import "modules/tables";
+@import "modules/buttons";
+@import "modules/flexbox";
+
+// vendor 
+@import "vendor/slick";
+@import "vendor/animate";
+
+// Custom Styles
+
+@import "partials/mediaqueries";
+@import "partials/navigation";
+@import "partials/style";

@@ -1,0 +1,499 @@
+
+
+// Tech Form
+
+.input-holder.error select{
+  border: $red 1px solid !important; box-shadow: none;
+}
+.input-holder.error input{
+  border: $red 1px solid !important;
+}
+.input-holder.error textarea{
+   border: $red 1px solid !important;
+}
+input { box-shadow: none;}
+textarea { box-shadow: none;}
+select { box-shadow: none;}
+
+.input-holder{
+  position: relative;  width: 100%; float: left;
+} 
+.input-holder.error span.error{
+  display: block;
+}
+span.error,span.errors{
+  position: absolute;
+  z-index: 9;
+  display: none;
+  right: 0 ;
+  left: auto ;
+  padding: 4px;
+  font-size: 11px;
+  background:$red;
+  color: #fff;
+  text-align: center;
+  top: -33px; line-height: 12px; font-family: $body-font;
+}
+span.error:after,span.errors:after{
+  content:'';
+    position: absolute;
+    bottom: -10px;
+    right: 10px ;
+    display: block;
+    border: solid;
+    border-color: $red transparent $red;
+    border-width: 10px 10px 0;  font-family: $body-font;
+}
+.btn-grp .ref-img:active, 
+.btn-grp .ref-img:hover,
+.btn-grp .ref-img:focus {outline: none !important;}
+
+.btn-grp .ref-img {
+  margin:  0;
+  padding:0;
+  fill: $primary-color;; outline: none !important; 
+  width: 20px !important;
+  height:20px !important; border:none;
+}
+
+.shapes-cap {
+ width: 15px !important;
+  height:15px !important;
+   padding: 0px;
+    margin: 0px;
+}
+ .btn-grp .shapes-cap .shape-color {
+  fill: #333333;
+}
+
+.captcha_active {
+  border: 1px solid $primary-color !important;
+}
+.btn-grp a {
+  margin: 0px 0px 0px 6px;
+  border: 1px solid #B1B1B1;
+  padding:5px 6px 1px 6px;
+  text-align: center;
+  cursor: pointer; display: inline-block;
+}
+
+
+// Tech Form
+
+
+// Pop Up
+
+.fade {
+ opacity: 0;
+ -webkit-transition: opacity 0.15s linear;
+ transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  display: none;
+  visibility: hidden;
+}
+.collapse.in {
+  display: block;
+  visibility: visible;
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+ transition-property: height, visibility;
+ -webkit-transition-duration: 0.35s;
+ transition-duration: 0.35s;
+ -webkit-transition-timing-function: ease;
+ transition-timing-function: ease;
+}
+.modal-open {
+  padding-right: 0px !important;
+}
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.modal.fade .modal-dialog {
+ -webkit-transform: scale(0.7);
+     -ms-transform: scale(0.7);
+         transform: scale(0.7);
+ -webkit-transition: all 0.3s ease 0s;
+         transition: all 0.3s ease 0s;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+    z-index: 9999;
+}
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+    outline: 0;
+}
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #000000;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.modal-header {
+    padding: 5px 5px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: $secondary-color;
+    color: $white;
+}
+   
+.modal-header .close {
+    margin-top: 0px;
+    background: $primary-color;
+    opacity:1; 
+    padding: 3px 10px 2px 10px; 
+    position: absolute; 
+    right: 15px; top: 15px;
+  border-radius: 5px; 
+  &:hover { color: $white; background: #ccc;}
+  @include max (767) { }
+}
+.modal-title {
+    margin: 0;
+}
+.modal-body {
+    position: relative; width: 100%;
+    padding: 25px 15px 10px 15px;
+    .input-holder {
+      select {
+        width: 100%;
+        font-size: 14px;
+        padding:10px;
+      
+        border: 1px solid #d5d5d5;
+        background: url(../images/arrow.jpg) right top no-repeat #fff;
+        -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+      }
+    }
+  .modal-cap { @include clearfix; width: 100%; display: block; position: relative; height: 120px; clear: both; text-align: right; 
+    p { font-family: &body-font;; font-size: $sm; font-weight: 500; margin: 0 0 5px;
+      span { font-weight: 700; text-transform: uppercase;}
+      @include max(1023)  {  margin: 10px 0 10px;}
+    }
+    .btn-grp { margin: 8px 0;}
+    .plz { position: absolute; right: 0; bottom: 25px; font-size: $sm; font-family: $body-font; width: 95px; font-weight: 500; }
+
+    @include max(1199) { height: 120px;}
+    @include max(1023) { height: 105px;}
+    @include max(767) { height: 130px;}
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+    border: 1px solid #d5d5d5 !important;
+  }
+}
+
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+}
+.modal-footer .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+}
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+  }
+    .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .modal-sm {
+      width: 300px;
+    }
+}
+@media (min-width: 992px) {
+    .modal-lg {
+      width: 900px;
+    }
+}
+.clearfix:before,
+.clearfix:after,
+.modal-footer:before,
+.modal-footer:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after,
+.modal-footer:after {
+    clear: both;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float: left !important;
+}
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.invisible {
+    visibility: hidden;
+}
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+.affix {
+    position: fixed;
+}
+.modal-header h4 { 
+  color: #fff; 
+  font-family: &body-font;; 
+  font-size: 20px; 
+  text-transform: uppercase; 
+  text-align: center;
+  padding: 10px 0 0 0;
+  @include max (767) { font-size: 14px; padding: 10px 0;}
+}
+
+@include placeholder (#252525);
+.modal-body input[type="text"],input[type="email"],input[type="tel"]       { 
+  border:none; 
+  margin: 5px 0px; 
+  color: #666; 
+  width: 100%; 
+  padding: 10px ;
+  border:1px solid #d5d5d5;
+  font:14px/18px &body-font;;
+  &:focus{
+    border:1px solid $blue;
+    transition: all 0.5s ease;
+  }
+
+}
+
+
+
+.modal-body textarea {
+  border:1px solid #d5d5d5; 
+  margin: 5px 0px; 
+  resize:none; 
+  color: #666; 
+  width: 100%; 
+  padding:10px; 
+  height: 80px;
+  font:14px/18px &body-font;;
+  margin-bottom: 10px;
+  &:focus{
+     border-bottom:1px solid $blue;
+    transition: all 0.5s ease;
+  }
+}
+
+.close { 
+  color: #fff ; 
+  border-radius: 5px; 
+  border: none;
+  &:hover {
+     color: #FFA61A; 
+  }
+}
+.close:hover,.close:focus,.close:active { 
+  outline: none;
+}
+
+
+.modal-body {  position: relative; display: inline-block;
+  input[type="submit"]
+{  border-radius: 0px; border: 0px; padding: 10px 20px; margin: 7px 0 15px; float: right; background: $primary-color; text-align: center; color: $white; font-size: $text-sm; text-transform: uppercase; position: relative; z-index: 1; border-radius: 0px;
+  font-size: &body-font; ; font-weight: 500;
+  &:hover { background: $secondary-color; }
+}
+
+
+.input-holder.error input{
+  border: #f00 1px solid !important;
+}
+}
+
+
+// pop up
+
+// Wp Paginate
+
+
+.wp-paginate{ display:inline-block;float:right; margin: 30px 0 !important;}
+.wp-paginate li{display:inline-block;float:left;padding: 5px 10px !important;text-transform:uppercase; border: none !important; 
+  a { color: $text-color;
+    &:hover { color: $primary-color;}
+  }
+}
+.wp-paginate .current { background: none !important; border: none !important;}
+.wp-paginate a {  border: none !important; background: none !important; color: $text-color !important;
+  
+}
+.wp-paginate li a:hover { color: $primary-color !important;}
+
+.wp-paginate li .page.current { background: none; color: $primary-color; font-weight: 500; background: none !important;}
+.wp-paginate li:before{display:none;}
+
+.wp-paginate li .next,
+.wp-paginate li .prev{background-color:$primary-color; border:none; color:$white !important;font-size:$sm1;font-weight:400;padding:4px 10px 2px !important;text-transform:none; border-radius: 0px !important; text-transform: uppercase; background: $primary-color !important;}
+
+.wp-paginate li .next:hover,
+.wp-paginate li .prev:hover{text-decoration:none; color: $white !important; background: $secondary-color !important;}
+
+
+
+
+
+// Wp Paginate
+
+
+.alignnone {
+  float: none;
+  margin: 10px auto; display: block;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0px 0px 10px;
+}
+.alignleft {
+  float: left;
+  margin: 5px 10px 0px 0;
+}
+
+
+.aligncenter {
+  float: none;
+  display: block;
+  margin: 10px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===== IE Hack ======*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* ie10, ie11+ */
+
+
+
+
+select.sel { background-image: none !important;}
+
+}
+/* IE8/9 */
+@media screen\0 {
+
+
+
+
+}
+
+
+
+/*===== MOZ Hack ======*/
+
+@-moz-document url-prefix() { 
+
+}
+
+/*===== MOZ Hack ======*/
